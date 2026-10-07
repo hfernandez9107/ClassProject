@@ -1,0 +1,21 @@
+<button class="menu-toggle" (click)="toggleMenu()">
+  <mat-icon>menu</mat-icon>
+</button>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav [mode]="isHandset ? 'over' : 'side'" [opened]="!isHandset" class="sidenav">
+    <h2>Plataforma de Apuestas</h2>
+    <a routerLink="/futbol" (click)="isHandset && sidenav.close()">
+      <mat-icon>sports_soccer</mat-icon>
+      <span>Fútbol</span>
+    </a>
+    <a routerLink="/carreras" (click)="isHandset && sidenav.close()">
+      <mat-icon>sports_score</mat-icon>
+      <span>Carreras</span>
+    </a>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="contenedor-principal">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

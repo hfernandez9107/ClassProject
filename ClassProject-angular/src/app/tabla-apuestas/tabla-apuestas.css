@@ -1,0 +1,11 @@
+table {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+}
+th {
+  color: black;
+  font-weight: bold;
+}
+td {
+  color: #333;
+}
